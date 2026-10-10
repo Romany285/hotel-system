@@ -1,0 +1,19 @@
+@import "../../../../assets/styles/abstructs/variables";
+
+section {
+  .navbar {
+    background-color: $text-gray;
+  }
+
+  .profile-image {
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  .btn-navbar {
+    &:hover {
+      background-color: $text-hover-gray;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<section>
+  <div class="container">
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="black-box">
+          <div class="pt-3">
+            <span>{{ rooms }}</span>
+            <p>Rooms</p>
+          </div>
+
+          <span class="icon-work">
+            <i class="material-icons">work</i>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="black-box">
+          <div class="pt-3">
+            <span>{{ facilities }}</span>
+            <p>Facilities</p>
+          </div>
+
+          <span class="icon-work">
+            <i class="material-icons">work</i>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="black-box">
+          <div class="pt-3">
+            <span>{{ ads }}</span>
+            <p>Ads</p>
+          </div>
+
+          <span class="icon-work">
+            <i class="material-icons">work</i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <app-charts
+      (ads)="getAds($event)"
+      (facilities)="getFacilities($event)"
+      (rooms)="getRooms($event)"
+    ></app-charts>
+  </div>
+</section>

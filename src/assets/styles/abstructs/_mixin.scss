@@ -1,0 +1,108 @@
+@mixin divCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin auth-section {
+  @include divCenter;
+  min-height: 100vh;
+  padding: 1rem;
+  .container {
+    height: 100%;
+    .logo {
+      color: $text-mainColor;
+      font-size: 1.625rem;
+      font-style: normal;
+      font-weight: 500;
+      cursor: pointer;
+      span {
+        color: $text-secondryColor;
+      }
+      p {
+        color: $text-secondryColor;
+        font-size: 14px;
+      }
+    }
+    .card-auth {
+      width: 75%;
+      margin: auto;
+      margin-top: 1rem;
+      .header-auth {
+        margin-bottom: 2rem;
+        h2 {
+          margin-bottom: 1rem;
+          font-weight: 500;
+        }
+        span {
+          color: $text-secondryColor;
+          font-weight: bold;
+        }
+      }
+      .inputs-auth {
+   .form-group {
+        margin-bottom: 1.5rem;
+        label {
+          color: $text-secondryColor;
+          margin: 5px;
+        }
+        input,
+        select {
+          background-color: #f5f6f8;
+        }
+        a {
+          color: $text-secondryColor;
+          font-weight: bold;
+        }
+      }
+      .eye-icon {
+        position: absolute;
+        top: 58%;
+        right: 5%;
+        z-index: 100;
+      }
+      .circle-preview {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px dashed $text-secondryColor;
+        @include divCenter;
+
+        img {
+          width: 160px;
+        height: 160px;
+        border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .dropzone {
+        border: 2px dashed $text-secondryColor;
+        background-color: #f5f6f8;
+      }
+      }
+    }
+    .caption {
+      color: $text-whiteColor;
+      h2 {
+        font-weight: 600;
+      }
+    }
+    button {
+      &:hover {
+    background-color: $blue-main !important;
+    color: $text-whiteColor !important;
+  }
+    }
+  }
+}
+@mixin bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 0.95rem;
+  color: $text-whiteColor;
+}

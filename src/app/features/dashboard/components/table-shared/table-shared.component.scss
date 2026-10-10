@@ -1,0 +1,120 @@
+@import "../../../../../assets/styles/abstructs/variables";
+
+.even {
+  background-color: $text-whiteColor;
+}
+.odd {
+  background-color: $text-gray;
+}
+.header {
+  background-color: $blue-main;
+  color: $text-whiteColor;
+}
+th {
+  i {
+    cursor: pointer;
+    color: $blue-main;
+  }
+}
+.blue-main {
+  color: $blue-main;
+}
+.text-gray {
+  color: $text-power-gray;
+}
+
+.edit-btn {
+  // margin-left: 1px;
+  color: $text-power-gray;
+}
+.text-red {
+  color: red;
+}
+
+.delete-btn {
+  // padding-left: 15px;
+  color: red;
+}
+
+::ng-deep
+  mat-form-field
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding-left: 24px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+mat-form-field {
+  --mdc-filled-text-field-active-indicator-color: transperent;
+}
+
+::ng-deep
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-line-ripple::before {
+  border-bottom: 0px solid transparent;
+}
+
+// mat-form-field .mdc-text-field--filled {
+//   --mdc-filled-text-field-container-shape: 50px;
+//   border-bottom-right-radius: 50px;
+//   border-bottom-left-radius: 50px;
+// }
+html {
+  --mdc-filled-text-field-input-text-color: $color-orange;
+}
+
+::ng-deep mat-form-field .mat-mdc-form-field-bottom-align::before {
+  content: "";
+  display: inline;
+  // height: 0px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+} /* Structure */
+.example-container {
+  position: relative;
+}
+
+.example-table-container {
+  position: relative;
+  min-height: 200px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.example-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-rate-limit-reached {
+  max-width: 360px;
+  text-align: center;
+}
+
+/* Column Widths */
+.mat-column-number,
+.mat-column-state {
+  width: 64px;
+}
+
+.mat-column-created {
+  width: 124px;
+}

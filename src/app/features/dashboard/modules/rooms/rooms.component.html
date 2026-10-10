@@ -1,0 +1,99 @@
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="row gap-2 flex-nowrap">
+        <div class="col-md-8">
+          <div class="section-text">
+            <h4>Rooms table details</h4>
+            <p>You can check all details</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="section-btn">
+            <button routerLink="/dashboard/rooms/add-room">Add new room</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-6 mt-3">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+            <input
+              type="text"
+              placeholder="Search Here...."
+              class="form-control rounded"
+            />
+          </div>
+        </div>
+        <div class="col-md-3 mt-3">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Capicity</label
+              >
+            </div>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>All</option>
+              <option *ngFor="let item of roomsData" [value]="item.capacity">
+                {{ item.capacity }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Facility</label
+              >
+            </div>
+            <select
+            [(ngModel)] = "facilities"
+              (change)="getAllRooms()"
+              class="form-select"
+              aria-label="facilities"
+            >
+              <option selected>All</option>
+              <option *ngFor="let item of facilities" [value]="item._id">
+                {{ item.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="container-fluid">
+    <div class="row">
+      <app-table-shared
+      (roomsDelte)="deleteRoomById($event)"
+      (roomsViewed)="viewRoom($event)"
+      (roomsEdit)="uppdateRoom($event)"
+        [moduleName]="moduleName"
+        [displayedColumns]="displayedColumns"
+        [dataSource]="dataSource"
+        [actions]="actions"
+      ></app-table-shared>
+    </div>
+  </div>
+
+
+
+  <div>
+    <mat-paginator
+      (page)="handlePageEvent($event)"
+      [length]="totalCount"
+      [pageSize]="[params.size]"
+      [pageSizeOptions]="[5, 10, 25, 50, 100]"
+      aria-label="Select page"
+    >
+    </mat-paginator>
+  </div>
+</section>
+<app-no-data *ngIf="dataSource?.length === 0" header="room"></app-no-data>

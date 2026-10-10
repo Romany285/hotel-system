@@ -1,0 +1,51 @@
+<section class="">
+  <div
+    class="d-flex justify-content-between align-items-center navbar p-2 rounded-4 m-3"
+  >
+    <div>
+      <img
+        src="../../../../assets/images/dasboard-images/logo.svg"
+        class="w-100"
+        alt=""
+      />
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="pt-2">
+        <mat-icon class="me-4 text-warning">notifications</mat-icon>
+      </div>
+
+      <div class="border border-1 border-secondary p-1 rounded-circle">
+        <img [src]="profileData?.profileImage" class="profile-image" alt="" />
+      </div>
+
+      <div class="">
+        <div
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+          class="btn-navbar d-flex gap-2 justify-content-center align-items-center p-3 rounded-5 ms-2"
+        >
+          <span class="">{{ profileData?.userName }}</span>
+
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+        <mat-menu #menu="matMenu">
+          <button (click)="showProfile()" mat-menu-item>
+            <mat-icon>person</mat-icon>
+
+            {{'navBar.Profile' | translate}}
+          </button>
+          <button mat-menu-item (click)="openDialogCahngePassword()">
+            <mat-icon>lock_open</mat-icon>
+            {{'navBar.Change Password' | translate}}
+
+
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon> {{'navBar.logout' | translate}}
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</section>

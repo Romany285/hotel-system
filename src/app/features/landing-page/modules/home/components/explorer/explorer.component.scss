@@ -1,0 +1,22 @@
+@import "../../../../../../../assets/styles/abstructs/variables";
+.title{
+  color: rgba(21, 44, 91, 1);
+}
+p{
+  color: #999999;
+}
+.image {
+  border-radius: 15px;
+  border: 4px solid #e5e5e5;
+  border-top-left-radius: 70px;
+  width: 80%;
+  margin-left: auto;
+  img {
+    transform: translate(-25px, -25px );
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+  }
+}
+.example-form-field {
+  margin-right: 20px;
+}
