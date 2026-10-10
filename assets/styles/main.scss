@@ -1,0 +1,12 @@
+@import "./base/_typography.scss";
+@import "./base/_base.scss";
+@import "./abstructs/_variables.scss";
+@import "./abstructs/_mixin.scss";
+@import "./components/auth.scss";
+@import "./components/rooms";
+@import "./components/header-section-dashboard";
+@import "./abstructs/utilites";
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+

@@ -1,0 +1,22 @@
+button {
+  border-radius: $border-reduis;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in;
+  &.primary {
+    background: $bg-mainColor;
+    color: $text-whiteColor;
+  }
+  &.outline-primary {
+    color: $text-mainColor;
+    border: 2px solid $text-mainColor;
+    background-color: $text-whiteColor;
+  }
+  &:disabled {
+    opacity: 0.9;
+    cursor: not-allowed;
+  }
+  
+}
+.cursor-pointer {
+  cursor: pointer;
+}
